@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:selfproject_layout/Pages/Views/HomeView.dart';
+import 'package:selfproject_layout/Pages/Views/SearchView.dart';
+import 'package:selfproject_layout/Pages/Views/SettingView.dart';
+import 'package:selfproject_layout/Pages/Views/ThrView.dart';
 
 class Main extends StatefulWidget {
   @override
@@ -7,8 +11,9 @@ class Main extends StatefulWidget {
 
 class _MainState extends State<Main> {
   int _bottomNum = 0;
-  //int pageNum = 0;
   PageController? _pageController;
+
+  List<Widget> _Views = [new HomeView(), new SearchView(), new ThrView(), new SettingView()];
 
   @override
   void initState() {
@@ -39,12 +44,16 @@ class _MainState extends State<Main> {
         ],
       ),
       body: PageView.builder(
+        onPageChanged: (int i){
+          setState(() {
+            this._bottomNum = i;
+          });
+        },
+        //physics: NeverScrollableScrollPhysics(),
         controller: this._pageController,
         itemCount: 4,
         itemBuilder: (BuildContext context, int index){
-          return Scaffold(
-            body: Text(index.toString()),
-          );
+          return this._Views[index];
         }
       ),
       bottomNavigationBar: BottomNavigationBar(
