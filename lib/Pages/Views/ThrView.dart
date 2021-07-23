@@ -5,7 +5,7 @@ class ThrView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.lightBlue,
+      color: Colors.indigo,
     );
   }
 }
