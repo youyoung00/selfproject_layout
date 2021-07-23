@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:selfproject_layout/pages/mainpage.dart';
+import 'package:selfproject_layout/pages/MainPage.dart';
 
 class App extends StatelessWidget {
   @override

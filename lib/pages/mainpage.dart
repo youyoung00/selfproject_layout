@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:selfproject_layout/pages/views/homeView.dart';
-import 'package:selfproject_layout/pages/views/seachView.dart';
-import 'package:selfproject_layout/pages/views/settingView.dart';
-import 'package:selfproject_layout/pages/views/thrView.dart';
+import 'package:selfproject_layout/Pages/views/homeView.dart';
+import 'package:selfproject_layout/Pages/Views/SearchView.dart';
+import 'package:selfproject_layout/Pages/views/settingView.dart';
+import 'package:selfproject_layout/Pages/views/thrView.dart';
 
 class Main extends StatefulWidget {
 
@@ -16,7 +16,7 @@ class _MainState extends State<Main> {
   int bottomIndex = 0;
   PageController? _pageController;
 
-  List<Widget> _views = [new HomeView(),new SeachView(), new ThrView(), new SettingView()];
+  List<Widget> _views = [new HomeView(),new SearchView(), new ThrView(), new SettingView()];
 
   @override
   void initState() {
