@@ -47,9 +47,8 @@ class _MainState extends State<Main> {
         ],
       ),
       body: new PageView.builder(
+        // 하단의 아이템과 View의 갯수와 순서가 일치할 때 사용할 수 있는 로직.
         onPageChanged: (int i){
-          // 하단의 아이템과 View의 갯수와 순서가 일치할 때 사용할 수 있는 로직.
-
           setState(() {
             this.bottomIndex = i;
           });
